@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    position: absolute; /* 要素の位置を制御 */
+  }
+
+  .box1 {
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+  }
+
+  .box2 {
+    left: 50px;
+    top: 50px;
+    z-index: 99; /* 上位に表示 */
+  }
+
+  .box3 {
+    left: 80px;
+    top: 80px;
+    z-index: 50;
+  }
+</style>
+</head>
+<body>
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2 (z-index: 99)</div>
+  <div class="box box3">Box 3 (z-index: 50)</div>
+</body>
+</html>

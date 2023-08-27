@@ -1,0 +1,215 @@
+.header{
+    position: relative;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-bottom: 3px solid gray;
+}
+.tytle{
+    height: 100%;
+    width: 70%;
+}
+input{
+    display: none;
+}
+span.open {
+    top: 35px;
+    transform: rotate(45deg);
+}
+/*
+    ハンバーガーメニューがクリックされたら
+    真ん中の線は透明化して見えないようにする
+  */
+.span::before.open { opacity: 0; }
+
+/*
+    ハンバーガーメニューがクリックされたら
+    下の線は真ん中に移動させて-45℃回転
+  */
+span::after.open {
+    top: 35px;
+    transform: rotate(-45deg);
+}
+ul{
+    list-style-type: none;
+    margin: 80px 0 50px 0;
+    border-bottom: 3px solid gray;
+
+}
+.list{
+    font-family: Impact, sans-serif;
+    text-shadow: 10px 15px 10px rgba(7, 0, 0, 0.5);
+    font-size: 30px;
+    color: coral;
+    text-decoration:none;
+}
+label{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: inline-block;
+    width: 25px;
+    height: 23px;
+}
+label {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: inline-block;
+    padding: 3px;
+    width: 25px;
+    height: 23px;
+}
+
+label:hover {
+    background-color: rgb(2, 160, 137); /* カーソルを置いたら変わる色 */
+}
+span{
+    display: block;
+    height: 5px;
+    width: 25px;
+    background-color:#777;
+}
+span,span::before,span::after {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: #777;
+    content: "";
+    position: absolute;
+}
+span::before {
+    top: 8px;
+}
+span::after {
+    top: 16px;
+}
+nav{
+    position: fixed;
+    top: 30px;
+    left: 0;
+    z-index:99;
+    width: 100%; /* 画面幅に対して */
+    height: 900%; /* 画面の高さに対して */
+    background-color: #005060;
+    transform: translateX(-110%);
+}
+#check:checked ~ nav {
+    transform: translateX(0%);
+} 
+h1{
+    font-size: 60px;
+    font-family: Impact, sans-serif;
+    color: aliceblue;
+}
+li{
+    padding: 15px;
+}
+/* 共通のアイコンエフェクト */
+.socialEffect__link {
+    margin: .3em;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #bfbfbf;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform ease-out 0.2s;
+}
+.socialEffect__box li {
+    display: inline-block;
+}
+
+  /* インスタ用アイコン設定 */
+  .icon-instagram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0.9);
+  }
+  .fab.fa-instagram {
+    display: inline-block;
+    color: #fff;
+  }
+  .icon-instagram:hover {
+    background: radial-gradient(
+        circle farthest-corner at 32% 106%,
+        rgb(255, 225, 125) 0%,
+        rgb(255, 205, 105) 10%,
+        rgb(250, 145, 55) 28%,
+        rgb(235, 65, 65) 42%,
+        transparent 82%
+      ),
+      linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    transform: scale(0.9);
+  }
+  
+  /* フェイスブック用アイコン設定 */
+  .icon-facebook::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0.9);
+  }
+  .fab.fa-facebook-f {
+    display: inline-block;
+    color: #fff;
+  }
+  .icon-facebook:hover {
+    background: #3b5998;
+    transform: scale(0.9);
+  }
+  
+  /* ツイッター用アイコン設定 */
+  .icon-twitter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0.9);
+  }
+  .fab.fa-twitter {
+    display: inline-block;
+    color: #fff;
+  }
+  .icon-twitter:hover {
+    background: #00b0ed;
+    transform: scale(0.9);
+  }
+
+  .instagram-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #405DE6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .instagram-icon::before {
+    content: "\f16d"; /* Instagram icon Unicode */
+    font-family: "Font Awesome 5 Brands";
+    font-size: 28px;
+    color: white;
+  }
